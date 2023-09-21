@@ -16,7 +16,7 @@
             height: 50px;	
             overflow: hidden;
             position: relative;
-            background: orange;
+            background:white;
             color: black;
             border: 1px solid orange;
             }
@@ -46,21 +46,27 @@
 </head>
 <body>
     <div style="width: 100%;height: 10rem;padding: 25px;">
-        <div style="height:auto">
-            <div style="padding-top: 13px;padding-bottom: 13px;padding-left: 10px;">
-                <p id="blink" style="background-color: red;padding: 3rem;width: 60%;"> WARNING </p>
-                <script type="text/javascript">
-                    var blink = document.getElementById('blink');
-                    setInterval(function() {
-                        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-                    }, 1500);
-                </script>
+
+        <div style="background-color: white;">
+            <div style="height:auto">
+                <div style="padding-top: 13px;padding-bottom: 13px;padding-left: 10px;">
+                    <p id="blink" style="background-color:white;padding: 3rem;width: 60%;"> WARNING </p>
+                    <div class="scroll-left" style="width:70%">
+                        <p>scrolling message </p>
+                    </div> 
+     
+                    
+                    <script type="text/javascript">
+                        var blink = document.getElementById('blink');
+                        setInterval(function() {
+                            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                        }, 1500);
+                    </script>
+                
+                </div>
+        </div>
+
             
-            </div>
-            <div style="background-color:#ffd025;height:auto">
-                <div class="scroll-left" style="width:70%">
-                    <p>scrolling message </p>
-                    </div>
     </div>
 </body>
 </html>
