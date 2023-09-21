@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             
+            #blink {
+                font-size: 20px;
+                font-weight: bold;
+                color: #2d38be;
+                transition: 0.5s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div style="background-color:#ffd025;height:auto">
+            <div style="padding-top: 13px;padding-bottom: 13px;padding-left: 10px;">
+                <p id="blink"> blinking message </p>
+                <script type="text/javascript">
+                    var blink = document.getElementById('blink');
+                    setInterval(function() {
+                        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                    }, 1500);
+                </script>
+            
+            </div>
+
+
+
+        </div>
+    </body>
+</html>

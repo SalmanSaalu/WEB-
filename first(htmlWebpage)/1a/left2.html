@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .scroll-left {
+            height: 50px;	
+            overflow: hidden;
+            position: relative;
+            background: orange;
+            color: black;
+            border: 1px solid orange;
+            }
+            .scroll-left p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            /* Starting position */
+            transform:translateX(100%);
+            /* Apply animation to this element */
+            animation: scroll-left 15s linear infinite;
+            }
+            /* Move it (define the animation) */
+            @keyframes scroll-left {
+            0%   {
+            transform: translateX(100%); 		
+            }
+            100% {
+            transform: translateX(-100%); 
+            }
+            }
+            </style>
+
+          
+    </head>
+    <body>
+        <div style="background-color:#ffd025;height:auto">
+            <div class="scroll-left">
+                <p>scrolling message </p>
+                </div>
+    </body>
+</html>

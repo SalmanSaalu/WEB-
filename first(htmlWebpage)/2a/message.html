@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                    #blink {
+                font-size: 20px;
+                font-weight: bold;
+                color: #2d38be;
+                transition: 0.5s;
+            }
+
+            .scroll-left {
+            height: 50px;	
+            overflow: hidden;
+            position: relative;
+            background: orange;
+            color: black;
+            border: 1px solid orange;
+            }
+            .scroll-left p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            /* Starting position */
+            transform:translateX(100%);
+            /* Apply animation to this element */
+            animation: scroll-left 15s linear infinite;
+            }
+            /* Move it (define the animation) */
+            @keyframes scroll-left {
+            0%   {
+            transform: translateX(100%); 		
+            }
+            100% {
+            transform: translateX(-100%); 
+            }
+            }
+
+    </style>
+</head>
+<body>
+    <div style="width: 100%;height: 10rem;padding: 25px;">
+        <div style="height:auto">
+            <div style="padding-top: 13px;padding-bottom: 13px;padding-left: 10px;">
+                <p id="blink" style="background-color: red;padding: 3rem;width: 60%;"> WARNING </p>
+                <script type="text/javascript">
+                    var blink = document.getElementById('blink');
+                    setInterval(function() {
+                        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                    }, 1500);
+                </script>
+            
+            </div>
+            <div style="background-color:#ffd025;height:auto">
+                <div class="scroll-left" style="width:70%">
+                    <p>scrolling message </p>
+                    </div>
+    </div>
+</body>
+</html>

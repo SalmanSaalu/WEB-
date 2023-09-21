@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Frames</title>
+   </head>
+	
+   <frameset rows = "10%,80%,10%" style="font-family: math;">
+      <frame name = "top" src="top.html"/>
+        <frameset cols = "50%, 50%"> 
+            <frame name = "left" src = "left1.html" /> 
+            <frame name = "right" src = "right1.html" />         
+        </frameset> 
+
+        <frameset cols = "30%, 40%, 30%"> 
+            <frame name = "left" src = "left2.html" /> 
+            <frame name ='center' src="center2.html"/>
+            <frame name = "right" src = "right2.html" />         
+        </frameset> 
+      <noframes>
+         <body>Your browser does not support frames.</body>
+      </noframes>
+      
+   </frameset>
+   
+</html>
