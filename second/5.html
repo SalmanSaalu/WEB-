@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <label for="fname">name</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="phone">Phone number</label><br>
+        <input type="text" id="phone" name="phone" value=""><br>
+
+
+        <label for="prefered">prefered days of purchasing</label><br>
+
+        <input type="checkbox" id="monday" name="monday" value="monday">
+        <label for="monday">Monday</label><br>
+        <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+        <label for="tuesday">Tuesday</label><br>
+        <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+        <label for="wednesday">wednesday</label><br>
+        <input type="checkbox" id="thursday" name="thursday" value="thursday">
+        <label for="thursday">thursday</label><br>
+        <input type="checkbox" id="friday" name="friday" value="friday">
+        <label for="friday">friday</label><br>
+        <input type="checkbox" id="saturday" name="saturday" value="saturday">
+        <label for="saturday">saturday</label><br>
+        <input type="checkbox" id="sunday" name="sunday" value="sunday">
+        <label for="sunday">sunday</label><br><br>
+
+
+        <label for="prefered">prefered items of purchasing:</label>
+        <select name="prefered" id="prefered">
+          <option value="drinks">drinks</option>
+          <option value="snacks">snacks</option>
+          <option value="fruits">fruits</option>
+          <option value="vegetables">vegetables</option>
+          <option value="packets">packets</option>
+          <option value="stationaries">stationaries</option>
+          <option value="cosmetics">cosmetics</option>
+        </select><br>
+        <button onclick="myFunction()">proceed</button>
+        <button onclick="reset()">Reset</button>
+        <p id="fnametext"></p>
+        <p id="phonetext"></p>
+        <p id="preferedtext"></p>
+        <P id="mondaytext"></P>
+        <p id="tuesdaytext"></p>
+        <P id="wednesdaytext"></P>
+        <P id="thursdaytext"></P>
+        <P id="fridaytext"></P>
+        <P id="saturdaytext"></P>
+        <P id="sundaytext"></P>
+
+        
+      <!-- <script>
+        function proceed(){
+            console.log('kk')
+            console.log(document.getElementById("fname"))
+        }
+      </script> -->
+      
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("fnametext").innerHTML = document.getElementById("fname").value;
+  document.getElementById("phonetext").innerHTML = document.getElementById("phone").value;
+  document.getElementById("preferedtext").innerHTML = document.getElementById("prefered").value;
+  if(document.getElementById('monday').checked===true){
+    
+    document.getElementById("mondaytext").innerHTML ='monday'
+  }
+  if(document.getElementById('tuesday').checked===true){
+    
+    document.getElementById("tuesdaytext").innerHTML ='tueday'
+  }
+  if(document.getElementById('wednesday').checked===true){
+    
+    document.getElementById("wednesdaytext").innerHTML ='wednesday'
+  }
+  if(document.getElementById('thursday').checked===true){
+    
+    document.getElementById("thursdaytext").innerHTML ='thursday'
+  }
+  if(document.getElementById('friday').checked===true){
+    
+    document.getElementById("fridaytext").innerHTML ='friday'
+  }
+  if(document.getElementById('saturday').checked===true){
+    
+    document.getElementById("saturdaytext").innerHTML ='saturday'
+  }
+  if(document.getElementById('sunday').checked===true){
+    
+    document.getElementById("sundaytext").innerHTML ='sunday'
+  }
+
+
+}
+
+
+function reset(){
+    document.getElementById("fname").value='';
+    document.getElementById("fnametext").innerHTML='';
+    document.getElementById("phone").value='';
+    document.getElementById("phonetext").innerHTML='';
+    document.getElementById("prefered").value=''
+    document.getElementById("preferedtext").innerHTML=''
+    document.getElementById("mondaytext").innerHTML =''
+    document.getElementById("tuesdaytext").innerHTML =''
+    document.getElementById("wednesdaytext").innerHTML =''
+    document.getElementById("thursdaytext").innerHTML =''
+    document.getElementById("fridaytext").innerHTML =''
+    document.getElementById("saturdaytext").innerHTML =''
+    document.getElementById("sundaytext").innerHTML =''
+    document.getElementById('monday').checked=false
+    document.getElementById('tuesday').checked=false
+    document.getElementById('wednesday').checked=false
+    document.getElementById('thursday').checked=false
+    document.getElementById('friday').checked=false
+    document.getElementById('saturday').checked=false
+    document.getElementById('sunday').checked=false
+
+
+
+}
+</script>
+</body>
+</html>

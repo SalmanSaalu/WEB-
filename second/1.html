@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .st{
+            font-family: math;
+    font-size: 25px;
+        }
+
+        #blink {
+                font-size: 20px;
+                font-weight: bold;
+                color: #2d38be;
+                transition: 0.5s;
+            }
+
+        .scroll-left {
+        height: 50px;	
+        overflow: hidden;
+        position: relative;
+        background: orange;
+        color: black;
+        border: 1px solid orange;
+        }
+        .scroll-left p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        /* Starting position */
+        transform:translateX(100%);
+        /* Apply animation to this element */
+        animation: scroll-left 15s linear infinite;
+        }
+        /* Move it (define the animation) */
+        @keyframes scroll-left {
+        0%   {
+        transform: translateX(100%); 		
+        }
+        100% {
+        transform: translateX(-100%); 
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: blue">NILAMBUR</h1>
+    <h4 class="st" style="color: red;">edakarra</h4>
+    <h4 class="st" style="color: green;">malappuram</h4>
+    <h4 class="st" style="color: chocolate;">Kerala</h4>
+    <h4 class="st" id="blink" style="color: rebeccapurple;">Amal college of advanced studies</h4>
+    <div class="scroll-left">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+    </div>
+        
+            <script type="text/javascript">
+                var blink = document.getElementById('blink');
+                setInterval(function() {
+                    blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                }, 1500);
+            </script>
+        
+
+</body>
+</html> 

@@ -1,0 +1,28 @@
+.headText2{
+    margin-top: -40px;
+    font-size: 50px;
+    font-family: math;
+}
+
+.headText{
+    font-size: 50px;
+    margin-top: -1rem;
+}
+
+.paraText{
+    margin-top: -30px;
+    font-family: ui-monospace;
+}
+
+.mid{
+    padding-left: 7rem;
+    padding-right: 7rem;
+    background-color: whitesmoke;
+    height: auto;
+}
+
+.image{
+    background-image: url("personal.jpg");
+    background-size: cover;
+    height: 30rem;
+}

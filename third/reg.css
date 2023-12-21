@@ -1,0 +1,24 @@
+/* .row{
+    text-align: center;
+} */
+
+input{
+    width: 80%;
+    border: 0px;
+    height: 3rem;
+    font-family: math;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+/* .signin{
+    padding-left: 19rem;
+}
+
+.registerbtn{
+    margin-left: 19rem;
+
+} */
+
+.labels{
+    margin-right: 14rem;
+}

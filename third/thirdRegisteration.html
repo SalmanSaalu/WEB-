@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="reg.css"/>
+</head>
+<body>
+    
+        <div class="container">
+            <div >
+                <h1>Register</h1>
+                <p>Please fill in this form to create an account.</p>
+            </div>
+
+            <div class="row" style="margin-top: 5rem;">
+                <div class="col-md-6">
+                    <label for="name" class="labels"><b>name</b></label><br/>
+                    <input type="text" placeholder="Enter name" name="name" id="name" required><br/><br/>
+          
+                </div>
+                <div class="col-md-6">
+                    <label for="phonenumber"  class="labels"><b>phonenumber</b></label><br/>
+                    <input type="number"  placeholder="Enter phonenumber" name="phonenumber" id="phonenumber" required><br/><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="email"  class="labels"><b>Email</b></label><br/>
+                    <input type="email" placeholder="Enter Email" name="email" id="email" required><br/><br/>
+                </div>
+                <div class="col-md-6">
+                    <label for="dateOfBirth"  class="labels"><b>Date Of Birth</b></label><br/>
+                    <input type="date" placeholder="Enter date Of Birth" name="dateOfBirth" id="dateOfBirth" required><br/><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="psw" style="margin-right: 11rem;" class="labels"><b>Password</b></label><br/>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br/><br/>
+                </div>
+                <div class="col-md-6">       
+                    <label for="psw-repeat"  class="labels"><b>Repeat Password</b></label><br/>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required><br/><br/>
+                </div>
+
+            </div>
+
+          <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+
+          <button type="submit" onclick="submit()" class="registerbtn">Register</button>
+        
+        
+        <div class="signin">
+          <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div><br/>
+
+            <script>
+            function submit() {
+
+            var name=document.getElementById("name").value
+            var email=document.getElementById("email").value
+            var phonenumber=document.getElementById("phonenumber").value
+            var dateOfBirth=document.getElementById("dateOfBirth").value
+            var password=document.getElementById("psw").value
+            var CnfPassword=document.getElementById("psw-repeat").value
+           
+
+            if(name!=='' && email !=='' && phonenumber !=='' && dateOfBirth!=='' && password !=='' && CnfPassword!==''){
+                console.log(name,email,phonenumber,dateOfBirth,password,CnfPassword)
+                console.log(phonenumber.length)
+                if(phonenumber.length!==10){
+                        alert("please use only 10 digits")
+                     
+                }
+                else if(password !== CnfPassword){
+                    alert("please give same password")
+                }
+
+            }
+            else{
+                alert('please fill all details')
+            }
+            }
+            </script>
+     
+     
+</body>
+</html>
